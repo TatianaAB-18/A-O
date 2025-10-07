@@ -43,11 +43,14 @@
       z-index: 9999;
       height: 100vh;
       flex-direction: column;
-      transition: opacity 1s ease, visibility 1s ease;
+      transition: opacity 0.8s ease, visibility 0.8s ease;
     }
 
       #envelopeScreen.hidden {
       position: relative;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
       display: inline-block;
       text-align: center;
     }
@@ -85,7 +88,7 @@
 
     .open-letter-btn {
     position: absolute;
-  top: 45%;
+  top: 44%;
   left: 50%;
   transform: translateX(-50%);
   background: linear-gradient(90deg, #ff4d6d, #d00000);
@@ -388,8 +391,8 @@
 
     function openLetter() {
       envelopeScreen.classList.add('hidden');
-    setTimeout(() => envelopeScreen.style.display = 'none', 800);
-
+      setTimeout(() => envelopeScreen.style.display = 'none', 800);
+      bgMusic.play().catch(() => console.log('Interacción requerida para reproducir música.'));
     }
 
     openLetterBtn.addEventListener('click', openLetter);
@@ -469,5 +472,3 @@
   </script>
 </body>
 </html>
-
-
