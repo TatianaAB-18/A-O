@@ -47,28 +47,29 @@
     }
 
       #envelopeScreen.hidden {
-      opacity: 0;
-      visibility: hidden;
+      position: relative;
+      display: inline-block;
+      text-align: center;
     }
 
     .envelope-img {
-      width: 500px;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-      animation: float 2.5s ease-in-out infinite;
+      width: 45vw;           /* Escala con el ancho de la pantalla */
+    max-width: 450px;
+    min-width: 250px;
+    height: auto;
     }
 
     .envelope-img:hover {
       transform: scale(1.05);
     }
 
-  @media (max-width: 480px) {
-  .envelope-img {
-    width: 90%;
-    max-width: 280px;
+ @media (max-width: 600px) {
+  .open-letter-btn {
+    font-size: 3.5vw;
+    padding: 2vw 5vw;
+    top: 42%;
   }
-}
-    
+} 
 
     @keyframes float {
       0%, 100% { transform: translateY(0); }
@@ -84,26 +85,25 @@
 
     .open-letter-btn {
     position: absolute;
-  top: 40%; /* ajusta la altura (puedes cambiar a 50%, 55%...) */
+  top: 44%;
   left: 50%;
   transform: translateX(-50%);
   background: linear-gradient(90deg, #ff4d6d, #d00000);
   color: white;
   border: none;
-  padding: 12px 30px;
+  padding: 1vw 3vw;       /* Escala proporcionalmente */
   border-radius: 30px;
-  font-size: 18px;
+  font-size: 1.2vw;       /* Texto también proporcional */
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
   z-index: 10;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
     }
 
     .open-letter-btn:hover {
       background: linear-gradient(90deg, #ff6f91, #b30000);
-      transform: scale(1.08);
-      box-shadow: 0 8px 18px rgba(255, 107, 129, 0.45);
+  transform: translateX(-50%) scale(1.08);;
     }
 
 
