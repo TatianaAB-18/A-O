@@ -388,7 +388,8 @@
 
     function openLetter() {
       envelopeScreen.classList.add('hidden');
-      bgMusic.play().catch(() => console.log('Interacción requerida para reproducir música.'));
+    setTimeout(() => envelopeScreen.style.display = 'none', 800);
+
     }
 
     openLetterBtn.addEventListener('click', openLetter);
@@ -468,4 +469,5 @@
   </script>
 </body>
 </html>
+
 
